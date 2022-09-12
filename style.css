@@ -1,13 +1,23 @@
+
+
 body {
     background-color: #E5E5E5;
     height: auto;
 }
 
+
+
 .logo {
     margin: 40px 0 0 84px;
 }
 
+main{
+    margin: 0 auto;
+}
+
 #textarea {
+
+    display: flex;
     color: #0A3871;
     font-size: 30px;
     width: 500px;
@@ -70,11 +80,12 @@ body {
 }
 
 .mensaje {
+    float: right;
     position: absolute;
     width: 400px;
-    height: 700px;
-    left: 950px;
-    top: 40px;
+    height: 650px;
+    left: 900px;
+    top: 90px;
     background: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
@@ -82,7 +93,7 @@ body {
 
 .mensaje img {
     width: 336px;
-    height: 306px;
+    height: 256px;
     margin: 180px 32px;
 }
 
@@ -106,20 +117,22 @@ body {
     margin: 200px auto;
 }
 
-.mostrarMensaje {
+#mostrarMensaje {
+    
     display: none;
     display: contents;
     position: absolute;
     width: 400px;
-    height: 700px;
-    left: 950px;
-    top: 40px;
+    height: 650px;
+    left: 900px;
+    top: 90px;
     text-align: center;
     background: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
     padding: 20px;
 }
+
 
 .mostrarButton {
     display: none;
@@ -135,7 +148,7 @@ body {
     height: 50px;
     border-radius: 28px;
     border: #0A3871 1px solid;
-    margin: -50px 1000px;
+    margin: -50px 960px;
     position: absolute;
 }
 
@@ -174,6 +187,7 @@ footer p {
 }
 
 /*
+
 @media (max-width: 768px) {
 
     body {
@@ -188,13 +202,14 @@ footer p {
     #textarea {
         color: #0A3871;
         font-size: 30px;
-        width: 680px;
+        width: 580px;
         height: 48px;
         margin: 240px 40px 886px 40px;
         background-color: #E5E5E5;
         border: 0px none;
         font-weight: bold;
         resize: none;
+        
     }
 
     .botones {
@@ -215,10 +230,10 @@ footer p {
 
     .mensaje {
         position: absolute;
-        width: 688px;
+        width: 588px;
         height: 133px;
-        margin-left: -908px;
-        margin-top: 1100px;
+        margin-left: -850px;
+        margin-top: 900px;
         background: #FFFFFF;
         box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
         border-radius: 32px;
@@ -248,19 +263,27 @@ footer p {
         margin: 23px;
     }
 
-    .mostrarMensaje {
+    #mostrarMensaje {
         display: none;
         display: contents;
         position: absolute;
-        width: 688px;
-        height: 144px;
-        margin-left: -908px;
-        margin-top: 1100px;
-        top: 40px;
+        width: 588px;
+        height: 144px;  
         text-align: center;
         background: #FFFFFF;
         box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
         border-radius: 32px;
+        padding: 20px;
+        margin-top: 950px;
+        margin-left: -906px;
+    }
+
+    #msj {
+        display: none;
+        font-size: 20px;
+        border: 0px none;
+        font-weight: bold;
+        resize: none;
         padding: 20px;
     }
 
@@ -269,7 +292,7 @@ footer p {
         color: #0A3871;
         font-family: 'Inter';
         font-style: normal;
-        width: 600px;
+        width: 500px;
         height: 50px;
         border-radius: 28px;
         border: #0A3871 1px solid;
@@ -277,9 +300,7 @@ footer p {
         margin: -100px 110px;
     }
 
-    #msj {
-        display: none;
-    }
+
 
     footer {
         width: auto;
@@ -288,7 +309,7 @@ footer p {
 
 }
 
-@media(max-width: 320px) {
+@media(max-width: 375px) {
 
     body {
         width: 375px;
@@ -362,12 +383,12 @@ footer p {
         margin: 23px;
     }
 
-    .mostrarMensaje {
+    #mostrarMensaje {
         display: none;
         display: contents;
         position: absolute;
-        width: 443px;
-        height: 345px;
+        width: 300px;
+        height: 161px;
         margin-left: -950px;
         margin-top: 600px;
         top: 40px;
@@ -383,12 +404,12 @@ footer p {
         color: #0A3871;
         font-family: 'Inter';
         font-style: normal;
-        width: 400px;
+        width: 200px;
         height: 50px;
         border-radius: 28px;
         border: #0A3871 1px solid;
         position: absolute;
-        margin: 100px 130px 40px 40px;
+        margin: -34px 70px 168px 75px;
     }
 
     footer {

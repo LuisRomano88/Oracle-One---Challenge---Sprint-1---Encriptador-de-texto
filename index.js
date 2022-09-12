@@ -2,15 +2,36 @@
 //Declaracion de Variables
 const buttonEncriptar = document.querySelector('.buttonEncriptar');
 const buttonDesencriptar = document.querySelector('.buttonDesencriptar');
-const buttonCopiar = document.getElementById("mostrarButtonId")
-var texto = document.getElementById("textarea").value;
+const buttonCopiar = document.getElementById("mostrarButtonId");
+const mostrarMensaje = document.getElementById("mostrarMensaje");
 const msj = document.getElementById("msj");
 
+
+//captura de eventos
+
+buttonEncriptar.addEventListener("click", ()=> {
+    
+    encriptar();
+     
+    
+});
+
+buttonDesencriptar.addEventListener("click", ()=>{
+    desencriptar();
+});
+
+buttonCopiar.addEventListener("click", ()=>{
+    copiarMensaje();
+});
 
 
 
 //Validacion y funcion encriptar
+
 function encriptar() {
+    
+    const texto = document.getElementById("textarea").value;
+
     if (/[~!@#$%^&*()_+|}{[\]\\\/?><:"`;.,áéíóú']/.test(texto) || (/[0-9]/.test(texto)) ||
         (/[A-Z]/.test(texto))) {
 
@@ -26,15 +47,19 @@ function encriptar() {
             .replaceAll("u", "ufat");
 
         //document.getElementById("msj").innerHTML = textoSinEncriptado;
-        document.getElementById("msj").textContent = textoSinEncriptado
-        mostrarMensajeOculto.style.display = "block"
-        buttonCopiar.style.display = "block"
+        document.getElementById("msj").textContent = textoSinEncriptado;
+        mostrarMensaje.style.display = "block";
+        buttonCopiar.style.display = "block";
         msj.style.display = "block";
+       
     }
 }
 
 //validacion y funcion desencriptar
 function desencriptar() {
+
+    const texto = document.getElementById("textarea").value;
+    
     if (/[~!@#$%^&*()_+|}{[\]\\\/?><:"`;.,áéíóú']/.test(texto) || (/[0-9]/.test(texto)) || (/[A-Z]/.test(texto))) {
 
         alert("Solo Puede Ingresar Letras Minusculas");
@@ -49,9 +74,10 @@ function desencriptar() {
             .replaceAll("ufat", "u");
 
         //document.getElementById("msj").innerHTML = textoEncriptado;
-        document.getElementById("msj").textContent = textoEncriptado
-        mostrarMensajeOculto.style.display = "block"
-        buttonCopiar.style.display = "block"
+        document.getElementById("msj").textContent = textoEncriptado;
+        mostrarMensaje.style.display = "block";
+        buttonCopiar.style.display = "block";
+        
 
     }
 }
@@ -63,11 +89,5 @@ function copiarMensaje() {
 }
 
 
-//captura de eventos
-buttonEncriptar.addEventListener("click", encriptar)
-
-buttonDesencriptar.addEventListener("click", desencriptar)
-
-buttonCopiar.addEventListener("click", copiarMensaje)
 
 
