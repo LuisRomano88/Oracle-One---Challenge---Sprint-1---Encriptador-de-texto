@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Oracle ONE - Encriptador</title>
+</head>
+
+<body>
+
+    <header>
+        <img class="logo" src="imagenes/Vector.png" alt="logo">
+    </header>
+
+    <main >
+        <div class="mensaje" id="mensaje">
+            <img src="imagenes/Muñeco.png" alt="imagen">
+            <p>Ningún mensaje fue encontrado</p>
+            <p>ingresa el texto que deseas encriptar o desencriptar</p>
+        </div>
+        <div class="cajaTexto">
+            <textarea name="texto" id="textarea" placeholder="Ingrese el texto aqui" required></textarea>
+        </div>
+        <div class="info">
+            <p><img src="imagenes/bi_exclamation-circle-fill.png" alt="icono"> Solo letras minúsculas y sin acentos</p>
+        </div>
+        <div class="botones">
+            <button type="button" class="buttonEncriptar" name="btn-encriptar" >Encriptar</button>
+            <button type="button" class="buttonDesencriptar" name="btn-desencriptar">Desencriptar</button>
+        </div>
+
+    </main>
+
+    <section>
+
+
+        <div  id="mostrarMensaje">
+            <textarea id="msj" disabled></textarea>
+        </div>
+
+        <div class="mostrarButton" id="mostrarButtonId">
+            <button class="buttonCopiar">Copiar</button>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Curso: Principiante en Programación G3 - Oracle ONE 2022</p>
+        <p>Luis Romano</p>
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
